@@ -13,117 +13,134 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Smart Home Dashboard</h1>
-        </div>
+    <div class="login-form">
+        <form>
+            <h1>Login</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="email" placeholder="Email" autocomplete="nope" id="email">
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" autocomplete="new-password" id="pwd">
+                </div>
+            </div>
+            <div class="action">
+                <button id="login">Sign in</button>
+            </div>
+        </form>
     </div>
-
-    <div class="container">
-        <div class="dashboard">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="devices">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Bulb</p>
-                                    <img src="./images/light.svg" alt="light" id="lightimg1">
-                                    <i class="fas fa-lightbulb-on light" id="lighton1"
-                                        style="width: 25px; height: 25px; color: #3976f6;"></i>
-                                    <label class="switch">
-                                        <input type="checkbox" id="bulb1">
-                                        <span class="slider round"></span>
-                                    </label>
+    <div class="main" style="display: none;">
+        <div class="container">
+            <div class="header">
+                <h1>Smart Home Dashboard</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="dashboard">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="devices">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Bulb</p>
+                                        <img src="./images/light.svg" alt="light" id="lightimg1">
+                                        <i class="fas fa-lightbulb-on light" id="lighton1"
+                                            style="width: 25px; height: 25px; color: #3976f6;"></i>
+                                        <label class="switch">
+                                            <input type="checkbox" id="bulb1">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Fan</p>
-                                    <img src="./images/fan.svg" alt="light" id="lightimg2">
-                                    <i class="fas fa-lightbulb-on light" id="lighton2"
-                                        style="width: 25px; height: 25px; color: #3976f6;"></i>
-                                    <label class="switch">
-                                        <input type="checkbox" id="ceilingfan">
-                                        <span class="slider round"></span>
-                                    </label>
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Fan</p>
+                                        <img src="./images/fan.svg" alt="light" id="lightimg2">
+                                        <i class="fas fa-lightbulb-on light" id="lighton2"
+                                            style="width: 25px; height: 25px; color: #3976f6;"></i>
+                                        <label class="switch">
+                                            <input type="checkbox" id="ceilingfan">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Lamp</p>
-                                    <img src="./images/lamp.png" alt="light" id="lightimg3">
-                                    <i class="fas fa-lightbulb-on light" id="lighton3"
-                                        style="width: 25px; height: 25px; color: #3976f6;"></i>
-                                    <label class="switch">
-                                        <input type="checkbox" id="lamp">
-                                        <span class="slider round"></span>
-                                    </label>
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Lamp</p>
+                                        <img src="./images/lamp.png" alt="light" id="lightimg3">
+                                        <i class="fas fa-lightbulb-on light" id="lighton3"
+                                            style="width: 25px; height: 25px; color: #3976f6;"></i>
+                                        <label class="switch">
+                                            <input type="checkbox" id="lamp">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Curtain</p>
-                                    <img src="./images/blinds.png" alt="light" id="bedlampimg1">
-                                    <i class="fas fa-lightbulb-on light" id="bedlampon1"
-                                        style="width: 25px; height: 25px; color: #3976f6;"></i>
-                                    <label class="switch">
-                                        <input type="checkbox" id="curtain">
-                                        <span class="slider round"></span>
-                                    </label>
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Curtain</p>
+                                        <img src="./images/blinds.png" alt="light" id="bedlampimg1">
+                                        <i class="fas fa-lightbulb-on light" id="bedlampon1"
+                                            style="width: 25px; height: 25px; color: #3976f6;"></i>
+                                        <label class="switch">
+                                            <input type="checkbox" id="curtain">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-md-6">
-                    <div class="devices">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Bed room</p>
-                                    <img src="./images/power.png" alt="light" id="fan1">
-                                    <label class="switch">
-                                        <input type="checkbox" id="fanswitch1">
-                                        <span class="slider round"></span>
-                                    </label>
+                    <div class="col-12 col-md-6">
+                        <div class="devices">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Bed room</p>
+                                        <img src="./images/power.png" alt="light" id="fan1">
+                                        <label class="switch">
+                                            <input type="checkbox" id="fanswitch1">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Bed room</p>
-                                    <img src="./images/power.png" alt="light" id="fan2">
-                                    <label class="switch">
-                                        <input type="checkbox" id="fanswitch2">
-                                        <span class="slider round"></span>
-                                    </label>
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Bed room</p>
+                                        <img src="./images/power.png" alt="light" id="fan2">
+                                        <label class="switch">
+                                            <input type="checkbox" id="fanswitch2">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Bed room</p>
-                                    <img src="./images/tv.svg" alt="light" id="fan3">
-                                    <label class="switch">
-                                        <input type="checkbox" id="fanswitch3">
-                                        <span class="slider round"></span>
-                                    </label>
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Bed room</p>
+                                        <img src="./images/tv.svg" alt="light" id="fan3">
+                                        <label class="switch">
+                                            <input type="checkbox" id="fanswitch3">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-6">
-                                <div class="box">
-                                    <p>Bed room</p>
-                                    <img src="./images/speaker.svg" alt="light" id="fan4">
-                                    <label class="switch">
-                                        <input type="checkbox" id="fanswitch4">
-                                        <span class="slider round"></span>
-                                    </label>
+                                <div class="col-6">
+                                    <div class="box">
+                                        <p>Bed room</p>
+                                        <img src="./images/speaker.svg" alt="light" id="fan4">
+                                        <label class="switch">
+                                            <input type="checkbox" id="fanswitch4">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -132,14 +149,11 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
-
-
