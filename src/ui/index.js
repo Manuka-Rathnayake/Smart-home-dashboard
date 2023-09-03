@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword,browserSessionPersistence} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -14,6 +14,12 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+setPersistence(auth, browserSessionPersistence)
+  .then(() => {
+  })
+  .catch((error) => {
+    console.error('Error setting persistence:', error);
+  });
 
 login.addEventListener('click',(e) => {
   e.preventDefault()
@@ -34,6 +40,7 @@ login.addEventListener('click',(e) => {
     alert('Error: ' + error.message);
   });
 })  
+
 
 function showMainContent() {
   const mainContent = document.querySelector('.main');
