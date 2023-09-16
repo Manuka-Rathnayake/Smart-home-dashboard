@@ -61,6 +61,7 @@ getDocs(colRef)
     let buttonState3 = initialButtonState3;
     let buttonState4 = initialButtonState4;
 
+    updateUI();
   })
   .catch(err => {
     console.log(err.message)
