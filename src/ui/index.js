@@ -1,7 +1,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword,browserLocalPersistence,setPersistence} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
-import {getFirestore, collection,getDocs} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js";
+
 
 
 
@@ -23,51 +23,6 @@ let buttonState4;
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const db = getFirestore();
-
-
-const colRef = collection(db, 'SwitchStates');
-
-getDocs(colRef)
-  .then((snapshot) => {
-    let states = []
-    snapshot.docs.forEach((doc)=>{
-      states.push({ ...doc.data(),id:doc.id})
-    })
-    console.log(states)
-    /*
-    const initialButtonState1 = states.find((state) => state.Switch === 'buttonState1').State;
-    const initialButtonState2 = states.find((state) => state.Switch === 'buttonState2').State;
-    const initialButtonState3 = states.find((state) => state.Switch === 'buttonState3').State;
-    const initialButtonState4 = states.find((state) => state.Switch === 'buttonState4').State;
-    */
-
-    const initialButtonState1Obj = states.find((state) => state.Switch === 'buttonState1');
-    const initialButtonState2Obj = states.find((state) => state.Switch === 'buttonState2');
-    const initialButtonState3Obj = states.find((state) => state.Switch === 'buttonState3');
-    const initialButtonState4Obj = states.find((state) => state.Switch === 'buttonState4');
-    
-
-    const initialButtonState1 = initialButtonState1Obj ? initialButtonState1Obj.State : false;
-    const initialButtonState2 = initialButtonState2Obj ? initialButtonState2Obj.State : false;
-    const initialButtonState3 = initialButtonState3Obj ? initialButtonState3Obj.State : false;
-    const initialButtonState4 = initialButtonState4Obj ? initialButtonState4Obj.State : false;
-    
-
-    
-
-    let buttonState1 = initialButtonState1;
-    let buttonState2 = initialButtonState2;
-    let buttonState3 = initialButtonState3;
-    let buttonState4 = initialButtonState4;
-
-    updateUI();
-  })
-  .catch(err => {
-    console.log(err.message)
-  })
-
-
 
 await setPersistence(auth, browserLocalPersistence);
 
@@ -104,12 +59,6 @@ function hideLoginForm() {
 
 const socket = io();
 
-/*
-let buttonState1 = false;
-let buttonState2 = false;
-let buttonState3 = false;
-let buttonState4 = false;
-*/
 
 console.log("new",buttonState1);
 
