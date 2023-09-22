@@ -26,13 +26,13 @@ To run this project locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/smart-home-dashboard.git
+   git clone https://github.com/Manuka-Rathnayake/Smart-home-dashboard.git
 
 
 2. Navigate to the project directory
 
    ```bash
-   cd smart-home-dashboard
+   cd Smart-home-dashboard
 
 3. Install dependencies
 
