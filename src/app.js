@@ -15,7 +15,6 @@ const io = new Server(httpServer, { cors: { origin: '*' } });
 expressapp.use(express.static('src/ui'));
 
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyD5xOd_gq8l0dX8gfjrE66ab53URR8QXSY",
     authDomain: "smart-home-dashboard-18f8f.firebaseapp.com",
@@ -24,8 +23,7 @@ const firebaseConfig = {
     messagingSenderId: "232876551894",
     appId: "1:232876551894:web:800bfee306a8237dbfe377"
   };
-
-
+  
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
   const switchStatesCollection = collection(db, 'SwitchStates');
